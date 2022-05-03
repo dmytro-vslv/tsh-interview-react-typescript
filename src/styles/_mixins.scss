@@ -1,3 +1,11 @@
+@mixin container {
+  width: 100%;
+  max-width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 @mixin mq($min-screen: false, $max-screen: false) {
   @if ($min-screen and $max-screen) {
     @media all and (min-width: $min-screen) and (max-width: $max-screen) {

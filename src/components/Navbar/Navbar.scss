@@ -1,0 +1,66 @@
+.navbar {
+  width: 100%;
+  padding: 52px 0 32px;
+  background-color: $white;
+
+  @include mq($screen-l) {
+    padding: 48px;
+  }
+
+  &__container {
+    @include container;
+
+    display: grid;
+    grid-template-areas:
+      "logo link"
+      "search search"
+      "filters filters";
+
+    @include mq($screen-l) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+    align-self: center;
+    line-height: 0;
+
+    @include mq($screen-l) {
+      margin-right: 48px;
+    }
+
+    @include mq($screen-xl) {
+      margin-right: 105px;
+    }
+  }
+
+  &__search {
+    grid-area: search;
+    margin: 24px 0;
+
+    @include mq($screen-l) {
+      margin: 0 24px 0 0;
+      max-width: 392px;
+    }
+  }
+
+  &__filters {
+    grid-area: filters;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__link {
+    grid-area: link;
+    width: 88px;
+    align-self: center;
+    justify-self: end;
+
+    @include mq($screen-l) {
+      margin-left: auto;
+    }
+  }
+}

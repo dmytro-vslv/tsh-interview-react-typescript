@@ -5,6 +5,7 @@
   color: $black;
   font-weight: $font-weight;
   font-size: $font-size-base;
+  text-transform: capitalize;
 
   &:hover {
     cursor: pointer;
