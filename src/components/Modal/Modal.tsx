@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { createPortal } from "react-dom";
+import { useOnClickOutside } from "hooks/useOnClickOutside";
 import { IconName } from "components/Icon/Icon.enum";
 import { Backdrop, Icon } from "components";
 
@@ -13,6 +14,8 @@ const modalRoot = document.getElementById("overlays") as HTMLElement;
 
 const Modal = ({ show, onClose, children }: ModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
+
+  useOnClickOutside(modalRef, () => onClose());
 
   if (!show) return null;
 
