@@ -1,4 +1,10 @@
-import { useState } from "react";
+import { useAppSelector, useAppDispatch } from "redux/store/hooks";
+import {
+  selectFilter,
+  setSearch,
+  toggleActive,
+  togglePromo,
+} from "redux/slices/filterSlice";
 import { AppRoute } from "routing/AppRoute.enum";
 import { Logo, InputGroup, Checkbox, Button } from "components";
 
@@ -7,20 +13,19 @@ type NavbarProps = {
 };
 
 const Navbar = ({ className = "" }: NavbarProps) => {
-  const [search, setSearch] = useState("");
-  const [active, setActive] = useState(true);
-  const [promo, setPromo] = useState(false);
+  const { search, active, promo } = useAppSelector(selectFilter);
+  const dispatch = useAppDispatch();
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearch(e.target.value);
+    dispatch(setSearch(e.target.value));
   };
 
   const handleToggleActive = () => {
-    setActive((prevActive) => !prevActive);
+    dispatch(toggleActive());
   };
 
   const handleTogglePromo = () => {
-    setPromo((prevPromo) => !prevPromo);
+    dispatch(togglePromo());
   };
 
   return (
