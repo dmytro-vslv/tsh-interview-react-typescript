@@ -7,3 +7,4 @@ export { default as Logo } from "./Logo/Logo";
 export { default as Navbar } from "./Navbar/Navbar";
 export { default as Product } from "./Product/Product";
 export { default as Rating } from "./Rating/Rating";
+export { default as Spinner } from "./Spinner/Spinner";

@@ -1,0 +1,24 @@
+.spinner {
+  display: block;
+  animation: spinner 2s linear infinite;
+
+  &__circle {
+    color: $gray-2;
+  }
+
+  &__path {
+    color: $blue-1;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(720deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
