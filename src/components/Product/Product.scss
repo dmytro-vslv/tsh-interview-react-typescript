@@ -64,4 +64,44 @@
     margin-top: auto;
     margin-bottom: 16px;
   }
+
+  &__modal {
+    border-radius: inherit;
+  }
+
+  &__modal-header {
+    width: 100%;
+    height: 354px;
+    border-radius: inherit;
+  }
+
+  &__modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+
+  &__modal-content {
+    padding: 24px;
+
+    @include mq($screen-m) {
+      padding: 24px 32px 56px;
+    }
+  }
+
+  &__modal-name {
+    @extend .product__name;
+
+    font-size: $font-size-large;
+    line-height: 30px;
+  }
+
+  &__modal-description {
+    @extend .product__description;
+
+    font-size: $font-size-medium;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
 }
