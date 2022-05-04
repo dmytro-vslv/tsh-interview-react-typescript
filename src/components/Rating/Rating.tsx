@@ -1,4 +1,5 @@
 import { Icon } from "components";
+import { IconName } from "components/Icon/Icon.enum";
 
 type RatingProps = {
   className?: string;
@@ -22,7 +23,7 @@ const Rating = ({ className = "", rating }: RatingProps) => {
             rating__star--filled
           "
           key={index}
-          name="star-filled"
+          name={IconName.StarFilled}
         />
       ))}
 
@@ -33,7 +34,7 @@ const Rating = ({ className = "", rating }: RatingProps) => {
             rating__star--empty
           "
           key={index}
-          name="star-empty"
+          name={IconName.StarEmpty}
         />
       ))}
     </div>

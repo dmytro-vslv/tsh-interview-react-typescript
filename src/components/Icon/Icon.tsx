@@ -1,17 +1,18 @@
 import { ReactComponent as StarEmpty } from "../../assets/icons/star-empty.svg";
 import { ReactComponent as StarFilled } from "../../assets/icons/star-filled.svg";
+import { IconName } from "./Icon.enum";
 
 type IconProps = {
   className?: string;
-  name: "star-empty" | "star-filled";
+  name: IconName;
 };
 
 const Icon = ({ className = "", name }: IconProps) => {
   switch (name) {
-    case "star-empty":
+    case IconName.StarEmpty:
       return <StarEmpty className={className} />;
 
-    case "star-filled":
+    case IconName.StarFilled:
       return <StarFilled className={className} />;
 
     default:
