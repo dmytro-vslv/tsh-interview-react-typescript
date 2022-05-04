@@ -5,4 +5,5 @@ export { default as Icon } from "./Icon/Icon";
 export { default as InputGroup } from "./InputGroup/InputGroup";
 export { default as Logo } from "./Logo/Logo";
 export { default as Navbar } from "./Navbar/Navbar";
+export { default as Product } from "./Product/Product";
 export { default as Rating } from "./Rating/Rating";
