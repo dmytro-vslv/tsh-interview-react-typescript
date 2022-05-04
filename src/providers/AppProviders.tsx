@@ -1,6 +1,10 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from "react-router-dom";
+import { Provider } from "react-redux";
+import { AppProvidersProps } from "./AppProviders.types";
+import { store } from "redux/store/store";
 
-import { AppProvidersProps } from './AppProviders.types';
-
-export const AppProviders = ({ children }: AppProvidersProps) => <Router>{children}</Router>;
+export const AppProviders = ({ children }: AppProvidersProps) => (
+  <Provider store={store}>
+    <Router>{children}</Router>
+  </Provider>
+);

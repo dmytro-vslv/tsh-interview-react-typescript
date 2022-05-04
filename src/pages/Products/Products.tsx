@@ -1,83 +1,25 @@
+import { useEffect } from "react";
+import { useAppSelector, useAppDispatch } from "redux/store/hooks";
+import { asyncGetItems, selectProducts } from "redux/slices/productsSlice";
 import { Navbar, Product } from "components";
 
 const Products = () => {
+  const { items } = useAppSelector(selectProducts);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(asyncGetItems());
+  }, [dispatch]);
+
   return (
     <section className="products">
       <Navbar className="products__navbar" />
 
       <div className="products__container">
         <div className="products__items">
-          <Product
-            active={true}
-            promo={true}
-            image="https://picsum.photos/640/480"
-            name="Product name"
-            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit."
-            rating={5}
-          />
-
-          <Product
-            active={true}
-            promo={false}
-            image="https://picsum.photos/640/480"
-            name="Product name"
-            description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, illum"
-            rating={0}
-          />
-
-          <Product
-            active={false}
-            promo={true}
-            image="https://picsum.photos/640/480"
-            name="Product name"
-            description="Lorem ipsum dolor sit amet."
-            rating={1}
-          />
-
-          <Product
-            active={false}
-            promo={false}
-            image="https://picsum.photos/640/480"
-            name="Product name"
-            description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, illum"
-            rating={3}
-          />
-
-          <Product
-            active={false}
-            promo={true}
-            image="https://picsum.photos/640/480"
-            name="Product name"
-            description="Lorem ipsum dolor sit amet."
-            rating={1}
-          />
-
-          <Product
-            active={false}
-            promo={false}
-            image="https://picsum.photos/640/480"
-            name="Product name"
-            description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, illum"
-            rating={3}
-          />
-
-          <Product
-            active={true}
-            promo={true}
-            image="https://picsum.photos/640/480"
-            name="Product name"
-            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit."
-            rating={5}
-          />
-
-          <Product
-            active={true}
-            promo={false}
-            image="https://picsum.photos/640/480"
-            name="Product name"
-            description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, illum"
-            rating={0}
-          />
+          {items.map((item) => (
+            <Product key={item.id} product={item} />
+          ))}
         </div>
       </div>
     </section>

@@ -1,22 +1,13 @@
 import { Badge, Rating, Button } from "components";
+import { IProduct } from "redux/slices/productsSlice";
 
 type ProductProps = {
-  active: boolean;
-  promo: boolean;
-  image: string;
-  name: string;
-  description: string;
-  rating: 0 | 1 | 2 | 3 | 4 | 5;
+  product: IProduct;
 };
 
-const Product = ({
-  active,
-  promo,
-  image,
-  name,
-  description,
-  rating,
-}: ProductProps) => {
+const Product = ({ product }: ProductProps) => {
+  const { active, promo, image, name, description, rating } = product;
+
   return (
     <div
       className={`
