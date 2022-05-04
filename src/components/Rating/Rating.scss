@@ -1,0 +1,17 @@
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__star {
+    width: 13px;
+
+    &--filled {
+      color: $gold;
+    }
+
+    &--empty {
+      color: $gray-3;
+    }
+  }
+}
