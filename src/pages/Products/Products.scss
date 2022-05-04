@@ -1,0 +1,30 @@
+.products {
+  background-color: $gray-1;
+
+  &__navbar {
+    margin-bottom: 24px;
+
+    @include mq($screen-l) {
+      margin-bottom: 56px;
+    }
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    @include mq($screen-m) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq($screen-l) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
