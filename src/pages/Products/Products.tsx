@@ -1,15 +1,15 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "redux/store/hooks";
 import { asyncGetItems, selectProducts } from "redux/slices/productsSlice";
 import { selectFilter } from "redux/slices/filterSlice";
-import { Navbar, Spinner, Product } from "components";
+import { Navbar, Spinner, Product, Pagination } from "components";
 
 const Products = () => {
-  const { status, items } = useAppSelector(selectProducts);
+  const { status, items, meta } = useAppSelector(selectProducts);
   const { search, active, promo } = useAppSelector(selectFilter);
+  const [currentPage, setCurrentPage] = useState(1);
   const dispatch = useAppDispatch();
   const productsPerPage = 8;
-  const currentPage = 1;
 
   useEffect(() => {
     dispatch(
@@ -21,7 +21,7 @@ const Products = () => {
         ...(promo && { promo: String(promo) }),
       })
     );
-  }, [dispatch, search, active, promo]);
+  }, [dispatch, currentPage, search, active, promo]);
 
   return (
     <section className="products">
@@ -35,6 +35,13 @@ const Products = () => {
             <Product key={item.id} product={item} />
           ))}
         </div>
+
+        <Pagination
+          className="products__pagination"
+          currentPage={currentPage}
+          totalPages={meta.totalPages}
+          onChangePage={setCurrentPage}
+        />
       </div>
     </section>
   );

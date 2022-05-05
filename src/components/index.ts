@@ -7,6 +7,7 @@ export { default as InputGroup } from "./InputGroup/InputGroup";
 export { default as Logo } from "./Logo/Logo";
 export { default as Modal } from "./Modal/Modal";
 export { default as Navbar } from "./Navbar/Navbar";
+export { default as Pagination } from "./Pagination/Pagination";
 export { default as Product } from "./Product/Product";
 export { default as Rating } from "./Rating/Rating";
 export { default as Spinner } from "./Spinner/Spinner";

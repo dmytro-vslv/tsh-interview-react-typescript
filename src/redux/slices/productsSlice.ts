@@ -23,11 +23,25 @@ type queryParameters = {
 type ProductState = {
   status: "idle" | "loading" | "failed";
   items: IProduct[];
+  meta: {
+    currentPage: number;
+    itemCount: number;
+    itemsPerPage: number;
+    totalItems: number;
+    totalPages: number;
+  };
 };
 
 const initialState: ProductState = {
   status: "loading",
   items: [],
+  meta: {
+    currentPage: 0,
+    itemCount: 0,
+    itemsPerPage: 0,
+    totalItems: 0,
+    totalPages: 0,
+  },
 };
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -53,6 +67,7 @@ export const productsSlice = createSlice({
       .addCase(asyncGetItems.fulfilled, (state, { payload }) => {
         state.status = "idle";
         state.items = payload.items;
+        state.meta = payload.meta;
       })
       .addCase(asyncGetItems.rejected, (state) => {
         state.status = "failed";
