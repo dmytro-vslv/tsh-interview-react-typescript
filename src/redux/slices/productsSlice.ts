@@ -2,6 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { RootState } from "../store/store";
 
+export type StatusType = "idle" | "loading" | "failed";
+
 export interface IProduct {
   id: number;
   active: boolean;
@@ -21,7 +23,7 @@ type queryParameters = {
 };
 
 type ProductState = {
-  status: "idle" | "loading" | "failed";
+  status: StatusType;
   items: IProduct[];
   meta: {
     currentPage: number;

@@ -10,5 +10,6 @@ export { default as Modal } from "./Modal/Modal";
 export { default as Navbar } from "./Navbar/Navbar";
 export { default as Pagination } from "./Pagination/Pagination";
 export { default as Product } from "./Product/Product";
+export { default as ProductList } from "./ProductList/ProductList";
 export { default as Rating } from "./Rating/Rating";
 export { default as Spinner } from "./Spinner/Spinner";

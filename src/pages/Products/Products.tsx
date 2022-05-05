@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "redux/store/hooks";
 import { asyncGetItems, selectProducts } from "redux/slices/productsSlice";
 import { selectFilter } from "redux/slices/filterSlice";
-import { Navbar, Spinner, Product, Pagination } from "components";
+import { Navbar, ProductList, Pagination } from "components";
 
 const Products = () => {
   const { status, items, meta } = useAppSelector(selectProducts);
@@ -28,20 +28,16 @@ const Products = () => {
       <Navbar className="products__navbar" />
 
       <div className="products__container">
-        {status === "loading" && <Spinner className="products__spinner" />}
+        <ProductList status={status} items={items} />
 
-        <div className="products__items">
-          {items.map((item) => (
-            <Product key={item.id} product={item} />
-          ))}
-        </div>
-
-        <Pagination
-          className="products__pagination"
-          currentPage={currentPage}
-          totalPages={meta.totalPages}
-          onChangePage={setCurrentPage}
-        />
+        {status === "idle" && !!items.length && (
+          <Pagination
+            className="products__pagination"
+            currentPage={currentPage}
+            totalPages={meta.totalPages}
+            onChangePage={setCurrentPage}
+          />
+        )}
       </div>
     </section>
   );
