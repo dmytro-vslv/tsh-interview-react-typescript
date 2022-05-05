@@ -1,3 +1,4 @@
+import { ReactComponent as Clipboard } from "../../assets/icons/clipboard.svg";
 import { ReactComponent as Close } from "../../assets/icons/close.svg";
 import { ReactComponent as StarEmpty } from "../../assets/icons/star-empty.svg";
 import { ReactComponent as StarFilled } from "../../assets/icons/star-filled.svg";
@@ -10,6 +11,9 @@ type IconProps = {
 
 const Icon = ({ className = "", name }: IconProps) => {
   switch (name) {
+    case IconName.Clipboard:
+      return <Clipboard className={className} />;
+
     case IconName.Close:
       return <Close className={className} />;
 
