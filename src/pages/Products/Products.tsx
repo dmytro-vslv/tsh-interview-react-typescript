@@ -1,15 +1,27 @@
 import { useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "redux/store/hooks";
 import { asyncGetItems, selectProducts } from "redux/slices/productsSlice";
+import { selectFilter } from "redux/slices/filterSlice";
 import { Navbar, Spinner, Product } from "components";
 
 const Products = () => {
   const { status, items } = useAppSelector(selectProducts);
+  const { search, active, promo } = useAppSelector(selectFilter);
   const dispatch = useAppDispatch();
+  const productsPerPage = 8;
+  const currentPage = 1;
 
   useEffect(() => {
-    dispatch(asyncGetItems());
-  }, [dispatch]);
+    dispatch(
+      asyncGetItems({
+        limit: String(productsPerPage),
+        page: String(currentPage),
+        ...(search.length && { search }),
+        ...(active && { active: String(active) }),
+        ...(promo && { promo: String(promo) }),
+      })
+    );
+  }, [dispatch, search, active, promo]);
 
   return (
     <section className="products">
