@@ -1,0 +1,33 @@
+.empty {
+  width: 100%;
+  max-width: 600px;
+  height: 344px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: $white;
+  border-radius: 8px;
+
+  &__icon {
+    color: $gray-3;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    color: $black;
+    font-weight: $font-weight;
+    font-size: $font-size-medium;
+    line-height: 16px;
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    color: $gray-4;
+    font-weight: $font-weight;
+    font-size: $font-size-base;
+    line-height: 16px;
+  }
+}
