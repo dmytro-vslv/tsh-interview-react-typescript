@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "redux/store/hooks";
 import { asyncGetItems, selectProducts } from "redux/slices/productsSlice";
 import { selectFilter } from "redux/slices/filterSlice";
+import { useDebounce } from "hooks/useDebounce";
 import { Navbar, ProductList, Pagination } from "components";
 
 const Products = () => {
   const { status, items, meta } = useAppSelector(selectProducts);
   const { search, active, promo } = useAppSelector(selectFilter);
   const [currentPage, setCurrentPage] = useState(1);
+  const debouncedSearch = useDebounce<string>(search, 400);
   const dispatch = useAppDispatch();
   const productsPerPage = 8;
 
@@ -16,12 +18,12 @@ const Products = () => {
       asyncGetItems({
         limit: String(productsPerPage),
         page: String(currentPage),
-        ...(search.length && { search }),
+        ...(debouncedSearch.length && { search: debouncedSearch }),
         ...(active && { active: String(active) }),
         ...(promo && { promo: String(promo) }),
       })
     );
-  }, [dispatch, currentPage, search, active, promo]);
+  }, [dispatch, currentPage, debouncedSearch, active, promo]);
 
   return (
     <section className="products">
