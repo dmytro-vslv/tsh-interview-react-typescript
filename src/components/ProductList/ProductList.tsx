@@ -45,7 +45,6 @@ const ProductList = ({ className = "", status, items }: ProductListProps) => {
       className={`
         ${className}
         product-list
-        ${!items.length ? "product-list--empty" : ""}
       `}
     >
       {renderListContent()}
