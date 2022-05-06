@@ -1,0 +1,81 @@
+.login {
+  width: 100%;
+  height: 100vh;
+  background-color: $white;
+
+  &__content {
+    width: 100%;
+    height: 100%;
+
+    @include mq($screen-l) {
+      display: flex;
+    }
+  }
+
+  &__image {
+    display: none;
+
+    @include mq($screen-l) {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: 600px;
+      background-image: url("../../assets/images/login-picture.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__group {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 24px;
+
+    @include mq($screen-xl) {
+      margin-left: 128px;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 100px;
+
+    @include mq($screen-l) {
+      margin-bottom: 150px;
+    }
+  }
+
+  &__title {
+    color: $black;
+    font-weight: $font-weight;
+    font-size: $font-size-extra-large;
+    line-height: 40px;
+    text-transform: capitalize;
+    margin-bottom: 32px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__button {
+    margin-top: 32px;
+  }
+
+  &__link {
+    color: $gray-4;
+    font-weight: $font-weight;
+    font-size: $font-size-base;
+    line-height: 16px;
+    text-decoration-line: underline;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

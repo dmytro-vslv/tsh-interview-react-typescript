@@ -7,6 +7,7 @@ type InputGroupProps = {
   name?: string;
   placeholder?: string;
   value: string;
+  error?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
@@ -19,6 +20,7 @@ const InputGroup = ({
   name,
   placeholder = "",
   value,
+  error,
   onChange,
 }: InputGroupProps) => {
   return (
@@ -27,6 +29,7 @@ const InputGroup = ({
         ${className} 
         input-group
         ${variant ? `input-group--${variant}` : ""}
+        ${error ? "input-group--error" : ""}
       `}
     >
       {label && (
@@ -44,6 +47,8 @@ const InputGroup = ({
         value={value}
         onChange={onChange}
       />
+
+      {error && <span className="input-group__error">{error}</span>}
     </div>
   );
 };
