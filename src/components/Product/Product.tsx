@@ -3,12 +3,18 @@ import { Badge, Rating, Button, Modal } from "components";
 import { useState } from "react";
 
 type ProductProps = {
+  className?: string;
   product: IProduct;
 };
 
-const Product = ({ product }: ProductProps) => {
+const Product = ({ className = "", product }: ProductProps) => {
   const [openModal, setOpenModal] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const { active, promo, image, name, description, rating } = product;
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
 
   const handleOpenModal = () => {
     if (!active) return;
@@ -22,14 +28,21 @@ const Product = ({ product }: ProductProps) => {
   return (
     <div
       className={`
+        ${className}
         product 
         ${!active ? "product--unavailable" : ""}
+        ${!imageLoaded ? "product--loading" : ""}
       `}
     >
       <div className="product__header">
         {promo && <Badge className="product__badge" label="Promo" />}
 
-        <img className="product__image" src={image} alt={name} />
+        <img
+          className="product__image"
+          src={image}
+          alt={name}
+          onLoad={handleImageLoad}
+        />
       </div>
 
       <div className="product__content">
