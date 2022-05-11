@@ -1,4 +1,5 @@
 export enum AppRoute {
-  Home = '/',
-  Login = '/login',
+  Home = "/",
+  Products = "/products",
+  Login = "/login",
 }

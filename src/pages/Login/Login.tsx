@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AppRoute } from "routing/AppRoute.enum";
 import { Logo, InputGroup, Button } from "components";
 
@@ -11,7 +11,6 @@ const INITIAL_STATE = {
 const Login = () => {
   const [credentials, setCredentials] = useState(INITIAL_STATE);
   const [errors, setErrors] = useState(INITIAL_STATE);
-  const history = useHistory();
 
   const handleLogin = (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -21,7 +20,6 @@ const Login = () => {
     if (isValid) {
       setCredentials(INITIAL_STATE);
       setErrors(INITIAL_STATE);
-      history.push(AppRoute.Home);
     }
   };
 
@@ -89,7 +87,7 @@ const Login = () => {
             />
           </form>
 
-          <Link className="login__link" to={AppRoute.Home}>
+          <Link className="login__link" to={AppRoute.Products}>
             Forgot password?
           </Link>
         </div>

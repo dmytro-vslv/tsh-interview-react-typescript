@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "id": 25,
+      "name": "Handmade Plastic Sausages - Mocked",
+      "description": "Exercitationem nisi sit exercitationem accusamus ab accusantium.",
+      "rating": 4,
+      "image": "https://picsum.photos/640/480?random=7102",
+      "promo": true,
+      "active": false
+    },
+    {
+      "id": 26,
+      "name": "Ergonomic Fresh Sausages",
+      "description": "Fuga voluptates molestiae accusamus ea accusantium eos necessitatibus.",
+      "rating": 3,
+      "image": "https://picsum.photos/640/480?random=6112",
+      "promo": true,
+      "active": false
+    },
+    {
+      "id": 27,
+      "name": "Generic Soft Chicken",
+      "description": "Ea consequatur sit cupiditate nisi.",
+      "rating": 3,
+      "image": "https://picsum.photos/640/480?random=61",
+      "promo": false,
+      "active": true
+    },
+    {
+      "id": 28,
+      "name": "Practical Fresh Shoes",
+      "description": "Nostrum facilis odit est ut itaque esse eius voluptas in.",
+      "rating": 5,
+      "image": "https://picsum.photos/640/480?random=8154",
+      "promo": false,
+      "active": true
+    },
+    {
+      "id": 29,
+      "name": "Gorgeous Frozen Fish",
+      "description": "Culpa itaque et dolor consequatur corrupti.",
+      "rating": 5,
+      "image": "https://picsum.photos/640/480?random=3420",
+      "promo": false,
+      "active": true
+    },
+    {
+      "id": 30,
+      "name": "Tasty Wooden Mouse",
+      "description": "Ex omnis ut optio ipsam eveniet.",
+      "rating": 5,
+      "image": "https://picsum.photos/640/480?random=3618",
+      "promo": true,
+      "active": false
+    },
+    {
+      "id": 31,
+      "name": "Rustic Plastic Pants",
+      "description": "Inventore odit aut hic rerum rerum quia sed voluptas.",
+      "rating": 4,
+      "image": "https://picsum.photos/640/480?random=3873",
+      "promo": true,
+      "active": true
+    },
+    {
+      "id": 32,
+      "name": "Fantastic Concrete Soap",
+      "description": "Fuga facere voluptates consequatur eius eveniet illo.",
+      "rating": 1,
+      "image": "https://picsum.photos/640/480?random=2486",
+      "promo": false,
+      "active": true
+    }
+  ],
+  "meta": {
+    "totalItems": 100,
+    "itemCount": 8,
+    "itemsPerPage": 8,
+    "totalPages": 13,
+    "currentPage": 4
+  }
+}

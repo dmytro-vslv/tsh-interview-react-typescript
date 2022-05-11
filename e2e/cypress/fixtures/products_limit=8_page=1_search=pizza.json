@@ -1,0 +1,38 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Incredible Plastic Pizza - Mocked",
+      "description": "Molestiae iure eum voluptas culpa et ut quasi.",
+      "rating": 2,
+      "image": "https://picsum.photos/640/480?random=1074",
+      "promo": true,
+      "active": true
+    },
+    {
+      "id": 24,
+      "name": "Handmade Granite Pizza",
+      "description": "Voluptas iste ad corporis quidem autem.",
+      "rating": 2,
+      "image": "https://picsum.photos/640/480?random=6134",
+      "promo": true,
+      "active": true
+    },
+    {
+      "id": 68,
+      "name": "Practical Concrete Pizza",
+      "description": "Eveniet ea et asperiores.",
+      "rating": 5,
+      "image": "https://picsum.photos/640/480?random=2225",
+      "promo": true,
+      "active": true
+    }
+  ],
+  "meta": {
+    "totalItems": 3,
+    "itemCount": 3,
+    "itemsPerPage": 8,
+    "totalPages": 1,
+    "currentPage": 1
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Incredible Plastic Pizza - Mocked",
+      "description": "Molestiae iure eum voluptas culpa et ut quasi.",
+      "rating": 2,
+      "image": "https://picsum.photos/640/480?random=1074",
+      "promo": true,
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "Tasty Rubber Car",
+      "description": "Explicabo accusamus optio facilis nobis officiis sed nisi omnis quia.",
+      "rating": 5,
+      "image": "https://picsum.photos/640/480?random=2281",
+      "promo": true,
+      "active": true
+    },
+    {
+      "id": 5,
+      "name": "Fantastic Fresh Ball",
+      "description": "Aliquam delectus sapiente est cumque odio veniam reiciendis voluptatem distinctio.",
+      "rating": 1,
+      "image": "https://picsum.photos/640/480?random=5147",
+      "promo": true,
+      "active": true
+    },
+    {
+      "id": 8,
+      "name": "Small Wooden Gloves",
+      "description": "At facere non nisi autem.",
+      "rating": 1,
+      "image": "https://picsum.photos/640/480?random=3559",
+      "promo": false,
+      "active": true
+    },
+    {
+      "id": 9,
+      "name": "Practical Concrete Mouse",
+      "description": "Nulla dolor et at cumque perferendis dignissimos omnis.",
+      "rating": 3,
+      "image": "https://picsum.photos/640/480?random=3772",
+      "promo": false,
+      "active": true
+    },
+    {
+      "id": 11,
+      "name": "Unbranded Fresh Salad",
+      "description": "Aut nihil nemo rerum et.",
+      "rating": 1,
+      "image": "https://picsum.photos/640/480?random=7237",
+      "promo": false,
+      "active": true
+    },
+    {
+      "id": 14,
+      "name": "Refined Rubber Table",
+      "description": "Sed ratione vero magnam perferendis eum officiis perferendis ipsum.",
+      "rating": 5,
+      "image": "https://picsum.photos/640/480?random=8198",
+      "promo": false,
+      "active": true
+    },
+    {
+      "id": 15,
+      "name": "Refined Frozen Chair",
+      "description": "Expedita quisquam molestias.",
+      "rating": 3,
+      "image": "https://picsum.photos/640/480?random=7363",
+      "promo": true,
+      "active": true
+    }
+  ],
+  "meta": {
+    "totalItems": 48,
+    "itemCount": 8,
+    "itemsPerPage": 8,
+    "totalPages": 6,
+    "currentPage": 1
+  }
+}

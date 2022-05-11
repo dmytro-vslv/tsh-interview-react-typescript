@@ -35,7 +35,7 @@ const Products = () => {
         {status === "idle" && !!items.length && (
           <Pagination
             className="products__pagination"
-            currentPage={currentPage}
+            currentPage={meta.currentPage}
             totalPages={meta.totalPages}
             onChangePage={setCurrentPage}
           />

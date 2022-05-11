@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "id": 17,
+      "name": "Refined Fresh Gloves - Mocked",
+      "description": "Atque commodi qui aut velit est aut quae voluptas.",
+      "rating": 4,
+      "image": "https://picsum.photos/640/480?random=355",
+      "promo": true,
+      "active": true
+    },
+    {
+      "id": 18,
+      "name": "Practical Cotton Computer",
+      "description": "Quo molestiae aut aut et quos veniam.",
+      "rating": 2,
+      "image": "https://picsum.photos/640/480?random=3919",
+      "promo": false,
+      "active": false
+    },
+    {
+      "id": 19,
+      "name": "Sleek Plastic Computer",
+      "description": "Porro et sunt laudantium animi.",
+      "rating": 3,
+      "image": "https://picsum.photos/640/480?random=7153",
+      "promo": true,
+      "active": true
+    },
+    {
+      "id": 20,
+      "name": "Handcrafted Granite Tuna",
+      "description": "Nam eum praesentium eius animi aliquam.",
+      "rating": 1,
+      "image": "https://picsum.photos/640/480?random=4533",
+      "promo": true,
+      "active": false
+    },
+    {
+      "id": 21,
+      "name": "Refined Wooden Shirt",
+      "description": "Aut saepe et.",
+      "rating": 2,
+      "image": "https://picsum.photos/640/480?random=2056",
+      "promo": true,
+      "active": false
+    },
+    {
+      "id": 22,
+      "name": "Practical Wooden Chips",
+      "description": "Ab molestiae id sint aut maiores qui aut vel saepe.",
+      "rating": 3,
+      "image": "https://picsum.photos/640/480?random=1764",
+      "promo": false,
+      "active": false
+    },
+    {
+      "id": 23,
+      "name": "Generic Steel Towels",
+      "description": "Itaque similique et eos.",
+      "rating": 4,
+      "image": "https://picsum.photos/640/480?random=8825",
+      "promo": false,
+      "active": true
+    },
+    {
+      "id": 24,
+      "name": "Handmade Granite Pizza",
+      "description": "Voluptas iste ad corporis quidem autem.",
+      "rating": 2,
+      "image": "https://picsum.photos/640/480?random=6134",
+      "promo": true,
+      "active": true
+    }
+  ],
+  "meta": {
+    "totalItems": 100,
+    "itemCount": 8,
+    "itemsPerPage": 8,
+    "totalPages": 13,
+    "currentPage": 3
+  }
+}
