@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { fetchData } from "api/api";
 import { RootState } from "../store/store";
 
 export type StatusType = "idle" | "loading" | "failed";
@@ -14,7 +14,7 @@ export interface IProduct {
   rating: 0 | 1 | 2 | 3 | 4 | 5;
 }
 
-type queryParameters = {
+export type queryParameters = {
   limit: string;
   page: string;
   search?: string;
@@ -46,14 +46,11 @@ const initialState: ProductState = {
   },
 };
 
-const API_URL = process.env.REACT_APP_API_URL;
-
 export const asyncGetItems = createAsyncThunk(
   "products/asyncGetItems",
   async (queryParameters: queryParameters) => {
-    const queryString = new URLSearchParams(queryParameters).toString();
-    const response = await axios(`${API_URL}${queryString}`);
-    return response.data;
+    const data = await fetchData(queryParameters);
+    return data;
   }
 );
 
