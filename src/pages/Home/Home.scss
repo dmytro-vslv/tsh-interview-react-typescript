@@ -1,0 +1,46 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+
+  &__content {
+    width: 100%;
+    max-width: 600px;
+    padding: $spacer--medium;
+    display: flex;
+    flex-direction: column;
+    gap: $spacer--medium;
+    border-radius: 8px;
+    margin-bottom: $spacer--semi-medium;
+  }
+
+  &__title {
+    font-weight: $font-weight;
+    font-size: $font-size-large;
+    color: $black;
+    margin-bottom: $spacer--medium;
+  }
+
+  &__description {
+    font-weight: $font-weight;
+    font-size: $font-size-medium;
+    color: $gray-4;
+    text-align: justify;
+  }
+
+  &__buttons {
+    margin-top: $spacer--medium;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $spacer;
+
+    @include mq($screen-m) {
+      flex-direction: row;
+    }
+  }
+}
