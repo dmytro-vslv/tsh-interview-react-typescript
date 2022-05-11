@@ -5,14 +5,14 @@ type PaginationProps = {
   onChangePage: (pageNumber: number) => void;
 };
 
+const SPACER = "...";
+
 const Pagination = ({
   className = "",
   currentPage,
   totalPages,
   onChangePage,
 }: PaginationProps) => {
-  const spacer = "...";
-
   const handlePaginate = ({ target }: React.MouseEvent<HTMLButtonElement>) => {
     const pageNumber = +(target as HTMLButtonElement).value;
     onChangePage(pageNumber);
@@ -25,14 +25,14 @@ const Pagination = ({
   if (totalPages > 6) {
     if (currentPage < 3) {
       // Pattern example: 1 2 3 ... 98 99 100
-      pattern = [1, 2, 3, spacer, totalPages - 2, totalPages - 1, totalPages];
+      pattern = [1, 2, 3, SPACER, totalPages - 2, totalPages - 1, totalPages];
     } else if (currentPage >= 3 && !(currentPage >= totalPages - 4)) {
       // Pattern example: 2 3 4 ... 98 99 100
       pattern = [
         currentPage - 1,
         currentPage,
         currentPage + 1,
-        spacer,
+        SPACER,
         totalPages - 2,
         totalPages - 1,
         totalPages,
@@ -40,7 +40,7 @@ const Pagination = ({
     } else {
       // Pattern example: ... 95 96 97 98 99 100
       pattern = [
-        spacer,
+        SPACER,
         totalPages - 5,
         totalPages - 4,
         totalPages - 3,
@@ -82,7 +82,7 @@ const Pagination = ({
         <li
           className={`
             pagination__item 
-            ${item === spacer ? "pagination__item--spacer" : ""}
+            ${item === SPACER ? "pagination__item--spacer" : ""}
             ${currentPage === item ? "pagination__item--active" : ""}
           `}
           key={item}
@@ -90,7 +90,7 @@ const Pagination = ({
           <button
             className="pagination__button"
             value={item}
-            disabled={item === spacer || item === currentPage}
+            disabled={item === SPACER || item === currentPage}
             onClick={handlePaginate}
           >
             {item}

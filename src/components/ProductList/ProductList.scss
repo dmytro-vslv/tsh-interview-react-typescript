@@ -2,8 +2,8 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
-  margin-bottom: 40px;
+  gap: $spacer--semi-medium;
+  margin-bottom: $spacer--semi-large;
 
   @include mq($screen-m) {
     grid-template-columns: repeat(2, 1fr);
@@ -25,7 +25,7 @@
   }
 
   &__spinner {
-    margin: 48px auto 0;
+    margin: $spacer--extra-large auto 0;
   }
 
   &__empty {

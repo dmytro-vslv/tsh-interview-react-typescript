@@ -74,7 +74,8 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding: 16px 16px 24px 16px;
+    padding: $spacer--medium $spacer--medium $spacer--semi-medium
+      $spacer--medium;
   }
 
   &__name {
@@ -83,7 +84,7 @@
     font-size: $font-size-medium;
     line-height: 16px;
     text-transform: capitalize;
-    margin-bottom: 8px;
+    margin-bottom: $spacer--small;
   }
 
   &__description {
@@ -92,12 +93,12 @@
     font-size: $font-size-base;
     line-height: 16px;
     text-transform: capitalize;
-    margin-bottom: 32px;
+    margin-bottom: $spacer--large;
   }
 
   &__rating {
     margin-top: auto;
-    margin-bottom: 16px;
+    margin-bottom: $spacer--medium;
   }
 
   &__modal {
@@ -118,10 +119,10 @@
   }
 
   &__modal-content {
-    padding: 24px;
+    padding: $spacer--semi-medium;
 
     @include mq($screen-m) {
-      padding: 24px 32px 56px;
+      padding: $spacer--semi-medium $spacer--large 56px;
     }
   }
 

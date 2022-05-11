@@ -30,7 +30,7 @@
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
-    padding: 40px 24px;
+    padding: $spacer--semi-large $spacer--semi-medium;
 
     @include mq($screen-xl) {
       margin-left: 128px;
@@ -39,7 +39,7 @@
 
   &__logo {
     display: block;
-    margin-top: 40px;
+    margin-top: $spacer--semi-large;
     margin-bottom: 100px;
 
     @include mq($screen-l) {
@@ -53,18 +53,18 @@
     font-size: $font-size-extra-large;
     line-height: 40px;
     text-transform: capitalize;
-    margin-bottom: 32px;
+    margin-bottom: $spacer--large;
   }
 
   &__form {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    margin-bottom: 16px;
+    gap: $spacer--semi-medium;
+    margin-bottom: $spacer--medium;
   }
 
   &__button {
-    margin-top: 32px;
+    margin-top: $spacer--large;
   }
 
   &__link {

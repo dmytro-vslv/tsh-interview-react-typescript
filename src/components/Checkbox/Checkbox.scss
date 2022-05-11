@@ -1,7 +1,7 @@
 .checkbox {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: $spacer--small;
   color: $black;
   font-weight: $font-weight;
   font-size: $font-size-base;

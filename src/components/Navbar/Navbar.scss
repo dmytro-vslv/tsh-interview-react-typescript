@@ -1,10 +1,10 @@
 .navbar {
   width: 100%;
-  padding: 52px 0 32px;
+  padding: 52px 0 $spacer--large;
   background-color: $white;
 
   @include mq($screen-l) {
-    padding: 48px;
+    padding: $spacer--extra-large;
   }
 
   &__container {
@@ -28,7 +28,7 @@
     line-height: 0;
 
     @include mq($screen-l) {
-      margin-right: 48px;
+      margin-right: $spacer--extra-large;
     }
 
     @include mq($screen-xl) {
@@ -38,10 +38,10 @@
 
   &__search {
     grid-area: search;
-    margin: 24px 0;
+    margin: $spacer--semi-medium 0;
 
     @include mq($screen-l) {
-      margin: 0 24px 0 0;
+      margin: 0 $spacer--semi-medium 0 0;
       max-width: 392px;
     }
   }
@@ -50,7 +50,7 @@
     grid-area: filters;
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: $spacer--large;
   }
 
   &__link {

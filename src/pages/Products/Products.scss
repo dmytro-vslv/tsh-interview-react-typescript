@@ -4,7 +4,7 @@
   background-color: $gray-1;
 
   &__navbar {
-    margin-bottom: 24px;
+    margin-bottom: $spacer--semi-medium;
 
     @include mq($screen-l) {
       margin-bottom: 56px;
