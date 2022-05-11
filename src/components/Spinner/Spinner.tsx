@@ -14,6 +14,7 @@ const Spinner = ({ className = "" }: SpinnerProps) => {
       viewBox="0 0 60 60"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      data-testid="spinner"
     >
       <circle
         className="spinner__circle"

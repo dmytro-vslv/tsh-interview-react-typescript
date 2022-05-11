@@ -9,19 +9,19 @@ type IconProps = {
   name: IconName;
 };
 
-const Icon = ({ className = "", name }: IconProps) => {
+const Icon = ({ className = "", name, ...props }: IconProps) => {
   switch (name) {
     case IconName.Clipboard:
-      return <Clipboard className={className} />;
+      return <Clipboard className={className} {...props} />;
 
     case IconName.Close:
-      return <Close className={className} />;
+      return <Close className={className} {...props} />;
 
     case IconName.StarEmpty:
-      return <StarEmpty className={className} />;
+      return <StarEmpty className={className} {...props} />;
 
     case IconName.StarFilled:
-      return <StarFilled className={className} />;
+      return <StarFilled className={className} {...props} />;
 
     default:
       return null;

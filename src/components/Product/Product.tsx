@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { IProduct } from "redux/slices/productsSlice";
 import { Badge, Rating, Button, Modal } from "components";
-import { useState } from "react";
 
 type ProductProps = {
   className?: string;
@@ -33,6 +33,7 @@ const Product = ({ className = "", product }: ProductProps) => {
         ${!active ? "product--unavailable" : ""}
         ${!imageLoaded ? "product--loading" : ""}
       `}
+      data-testid="product"
     >
       <div className="product__header">
         {promo && <Badge className="product__badge" label="Promo" />}

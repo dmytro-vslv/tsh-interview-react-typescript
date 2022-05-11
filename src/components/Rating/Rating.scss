@@ -2,9 +2,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  list-style: none;
+
+  &__item {
+    width: 12px;
+  }
 
   &__star {
-    width: 13px;
+    width: 100%;
 
     &--filled {
       color: $gold;

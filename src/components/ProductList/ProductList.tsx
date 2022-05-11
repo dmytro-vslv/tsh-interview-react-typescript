@@ -20,7 +20,7 @@ const ProductList = ({ className = "", status, items }: ProductListProps) => {
           return (
             <Empty
               className="product-list__empty"
-              title="Ooops… It’s empty here"
+              title="Ooops… It's empty here"
               description="There are no products on the list"
             />
           );
@@ -46,6 +46,7 @@ const ProductList = ({ className = "", status, items }: ProductListProps) => {
         ${className}
         product-list
       `}
+      data-testid="product-list"
     >
       {renderListContent()}
     </div>
